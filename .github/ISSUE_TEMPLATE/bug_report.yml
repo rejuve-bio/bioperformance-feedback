@@ -1,0 +1,47 @@
+name: Bug report
+description: Something in the BioPerformance app is broken or wrong.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public.** Everything you write here, and every screenshot, can be seen by anyone. Leave out anything personal, such as health readings, names or contact details.
+
+        The easiest way to report a bug is **Send feedback** in the app itself.
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      description: Which app did this happen in?
+      options:
+        - Mobile
+        - Web
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make it happen again?
+      placeholder: |
+        1. Open …
+        2. Tap …
+        3. See …
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: You can find it in the app's settings.
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images here. Crop out anything personal first.
